@@ -4,26 +4,34 @@
             <img class="logo_header" src="/images/dc-logo.png" alt="">
 
             <ul class="menu_header">
-                <li>CHARACTERS</li>
-                <li class="active">COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
+                <li v-for="menuItem in menuItems" :class="{ 'active': menuItem.active }">
+                    {{ menuItem.item }}
+                </li>
             </ul>
         </div>
     </header>
-  </template>
-  
-  <script>
-    export default {
-      
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            menuItems: [
+                { item: 'CHARACTERS' },
+                { item: 'COMICS', active: true },
+                { item: 'MOVIES' },
+                { item: 'TV' },
+                { item: 'GAMES' },
+                { item: 'COLLECTIBLES' },
+                { item: 'VIDEOS' },
+                { item: 'FANS' },
+                { item: 'NEWS' },
+                { item: 'SHOP' },
+            ]
+        }
     }
-  </script>
+}
+</script>
   
   <style lang="scss" scoped>
 
