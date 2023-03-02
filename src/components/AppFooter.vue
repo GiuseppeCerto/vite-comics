@@ -160,7 +160,7 @@
     .follow_link{
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
     }
 
     .follow_link span{

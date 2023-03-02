@@ -58,7 +58,6 @@
     }
 
     .merch_item img{
-        width: 52px;
-        height: 58px;
+        width: 15%;
     }
 </style>
