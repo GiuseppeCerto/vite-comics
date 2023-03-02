@@ -144,7 +144,7 @@
 
   .main_button{
     background-color: rgba(2,130,249,255);
-    padding: 10px 20px;
+    padding: 10px 40px;
     font-size: 15px;
     font-weight: 600;
     justify-self: center;
