@@ -1,9 +1,17 @@
 <template>
   <section class="main_section">
     <div class="main_jumbo"></div>
-      <main class="container">
-        <Card class="card" v-for="(card,i) in cards" :key="i" :series="card.series" :thumb="card.thumb" />
-      </main>
+      <div class="bg_color">
+        <main class="container">
+          <div class="main_ticket">
+            CURRENT SERIES
+          </div>
+          <Card class="card" v-for="(card,i) in cards" :key="i" :series="card.series" :thumb="card.thumb" />
+          <div class="main_button">
+            LOAD MORE
+          </div>
+        </main>
+      </div>
   </section>
 </template>
   
@@ -17,73 +25,73 @@
         return{
           cards: [
             {
-              thumb: "/image/img1",
+              thumb: "/images/img1.jpg",
               price: "$19.99",
               series: "Action Comics",
               type: "comic book"
             },
             {
-              thumb: "/image/img2",
+              thumb: "/images/img2.jpg",
               price: "$3.99",
               series: "American Vampire 1976",
               type: "comic book"
             },
             {
-              thumb: "/image/img3",
+              thumb: "/images/img3.jpg",
               price: "$16.99",
               series: "Aquaman",
               type: "graphic novel"
             },
             {
-              thumb: "/image/img4",
+              thumb: "/images/img4.jpg",
               price: "$2.99",
               series: "Batgirl",
               type: "comic book"
             },
             {
-              thumb: "/image/img5",
+              thumb: "/images/img5.jpg",
               price: "$3.99",
               series: "Batman",
               type: "comic book"
             },
             {
-              thumb: "/image/img6",
+              thumb: "/images/img6.jpg",
               price: "$2.99",
               series: "Batman Beyond",
               type: "comic book"
             },
             {
-              thumb: "/image/img7",
+              thumb: "/images/img7.jpg",
               price: "$3.99",
               series: "Batman/Superman",
               type: "comic book"
             },
             {
-              thumb: "/image/img8",
+              thumb: "/images/img8.jpg",
               price: "$4.99",
               series: "Batman/Superman Annual",
               type: "comic book"
             },
             {
-              thumb: "/image/img9",
+              thumb: "/images/img9.jpg",
               price: "$5.99",
               series: "Batman: The Joker War Zone",
               type: "comic book"
             },
             {
-              thumb: "/image/img10",
+              thumb: "/images/img10.jpg",
               price: "$6.99",
               series: "Batman: Three Jokers",
               type: "comic book"
             },
             {
-              thumb: "/image/img11",
+              thumb: "/images/img11.jpg",
               price: "$4.99",
               series: "Batman: White Knight Presents: Harley Quinn",
               type: "comic book"
             },
             {
-              thumb: "/image/img12",
+              thumb: "/images/img12.jpg",
               price: "$16.99",
               series: "Catwoman",
               type: "graphic novel"
@@ -103,12 +111,43 @@
     background-repeat: no-repeat;
   }
 
+  .bg_color{
+    background-color: rgba(28,28,28,255);
+  }
+
   .container{
     display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1000px;
+    font-size: 10px;
+    font-weight: 100;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: white;
+    position: relative;
+    justify-content: center;
   }
   .card{
-    flex-basis: calc(100% / 6 - 15px / 6);
+    flex-basis: calc(100% / 6 - 53px / 6);
+  }
+
+  .main_ticket{
+    position: absolute;
+    background-color: rgba(2,130,249,255);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    top: -20px;
+    left: 0;
+  }
+
+  .main_button{
+    background-color: rgba(2,130,249,255);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    justify-self: center;
+    margin-top: 20px;
   }
   </style>
