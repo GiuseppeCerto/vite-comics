@@ -2,7 +2,7 @@
   <section class="main_section">
     <div class="main_jumbo"></div>
       <main class="container">
-        <Card class="card" v-for="(card,i) in cards" :key="i" :series="cards.series" :thumb="card.thumb" />
+        <Card class="card" v-for="(card,i) in cards" :key="i" :series="card.series" :thumb="card.thumb" />
       </main>
   </section>
 </template>
@@ -105,8 +105,10 @@
 
   .container{
     display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
   }
   .card{
-    flex-basis: calc(100% / 6);
+    flex-basis: calc(100% / 6 - 15px / 6);
   }
   </style>
